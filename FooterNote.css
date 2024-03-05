@@ -1,0 +1,123 @@
+/* -------------------------------------------------- */
+/* Footnotes */
+/* -------------------------------------------------- */
+
+/*estilo de borde footer*/
+.markdown-preview-view .footnotes hr {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:none;
+  display: flex;
+}
+.markdown-preview-view .footnotes hr::after {
+  content: " Footer de notas ";
+  font-size: 18px;
+  font-family: 'Fira Code', monospace;
+  animation: textGlow 4s infinite; /* Aplica la animación al texto del borde */
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    color: rgb(0, 0, 0); /* Color inicial */
+    filter: brightness(1); /* Brillo normal */
+  }
+  50% {
+    color: rgb(101, 101, 101); /* Color brillante */
+    filter: brightness(2); /* Brillo máximo */
+  }
+}
+
+/* Estilos para la sección footer */
+section.footnotes {
+  background-color: #ffffff;
+  transition: background-color 0.5s ease-in-out;
+  padding: 10px; /* Ajusta el padding según sea necesario */
+  margin: 0; /* Elimina el margen para evitar espacios no deseados */
+  color: rgb(0, 0, 0);
+  border-radius: 5px; /* Redondea los bordes */
+  box-shadow: 0 1px 9px rgba(88, 88, 88, 0.45), 0 10px 10px rgba(0, 0, 0, .22); /* Agrega una sombra */
+  transition: transform 0.3s ease-in-out; /* Transición para el efecto de ampliación */
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  color: rgb(0, 0, 0);
+  stroke-width: 8px;
+  background-color: white;
+  box-shadow: 0 1px 9px rgba(88, 88, 88, 0.15), 0 10px 10px rgba(0, 0, 0, .22) !important;
+  margin: 5px 5px 5px -5px;
+  padding: 5px 5px 5px 5px;
+  transform: scale(1); /* Escala inicial */
+  border-color: var(--interactive-accent) !important;
+  border-radius: 5px !important;
+}
+
+/* Estilos para el texto dentro de la sección footer */
+section.footnotes p {
+  transition: none; /* Elimina cualquier transición en el texto */
+}
+
+
+/* Estilos para el título de la sección */
+section.footnotes h2 {
+  margin-top: 0; /* Elimina el margen superior del título */
+  font-size: 20px; /* Ajusta el tamaño de la fuente según sea necesario */
+  color: grey; /* Cambia el color del texto del título */
+}
+
+
+
+
+/* boton para vincular texto y footer*/
+.footnote-backref {
+    color: #c400be;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: normal !important;
+    padding-left: 10px;
+    font-size: 15px;
+    vertical-align: top;
+}
+
+.footnote-backref:hover {
+    color: rgb(3, 95, 175);
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 4000;
+    transition: 300ms ease-in-out;
+    text-shadow: 0px 0px 12px var(--fbold);
+    position: relative;
+    
+}
+
+.markdown-preview-view .tippy-content {
+    max-height: 22em;
+    overflow-x: auto;
+    font-size: var(--editor-font-size);
+    background-color: var(--background-secondary);
+}
+
+/*Marco de parrafos de lista del footter*/
+section.footnotes li[data-footnote-id] {
+
+    background-color: #ffffff;
+    transition: background-color 0.5s ease-in-out;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    stroke-width: 8px;
+    background-color: white;
+
+
+    box-shadow: 0 0px 18px rgba(88, 88, 88, 0.15), 0 5px 5px rgba(0, 0, 0, .20) !important;
+    margin: 5px 5px 5px -5px;
+    padding: 5px 5px 5px 5px;
+
+    transform: translate3d(-15px, -3.5px, -15px, -15px) !important;
+    border-color: var(--interactive-accent) !important;
+    border-radius: 5px !important;
+
+}
