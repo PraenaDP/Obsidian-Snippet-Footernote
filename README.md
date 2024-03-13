@@ -1,4 +1,4 @@
-I'm PraenaDP, and in this GitHub repository, I present a CSS Snippet designed to modify the Footernote in Obsidian. This CSS file provides a specific solution for customizing the appearance and functionality of the Footernote in the Obsidian application.
+I'm PraenaDP, and in this GitHub repository, I present several CSS snippets designed to modify specific parts of Obsidian. These CSS files provide specific solutions for customizing the appearance and functionality of various aspects of the Obsidian application. They will be gradually updated over time.
 
 # Installation:
 
