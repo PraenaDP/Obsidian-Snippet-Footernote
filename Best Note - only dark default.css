@@ -1,0 +1,1252 @@
+/*Theme Dark Default Obsidian, Only Note Theme light*/
+/*I've used code snippets from Victologo's theme and others*/
+/*Settings*/
+
+/*------------------------------------------------
+Is recomended install:
+
+Code styler Pluggin ("It's advisable to use a clear type of code block.")
+Callout Manager Pluggin. 
+
+S - Callouts css ("With these calls, the theme improves.")
+S - Encoded icons
+S - External Link Icons
+https://github.com/SlRvb/Obsidian--ITS-Theme
+
+-------------------------------------------------*/
+
+/* --------------------------------*/
+/* AJUSTE DE NOTA */
+/* --------------------------------*/
+
+.cm-scroller{
+	background-color: #ffffff !important;
+  color:#000000;
+}
+  .markdown-reading-view > .markdown-preview-view {
+    background-color: #ffffff ! Important;
+    color:black !important;
+}
+
+div.markdown-preview-section > div > ul.has-list-bullet > li {
+  padding-left: 0p !important;
+}
+
+.markdown-preview-view{
+  color: rgb(25, 25, 25);
+}
+
+
+/*=========================*/
+/* 7 Sppet -  Zoom images */
+/*=======================*/
+
+.markdown-preview-view img {
+  cursor: zoom-in;
+  border-radius: 7px;
+  transition: 600ms !important;
+}
+
+.markdown-preview-view img:active {
+  cursor: zoom-out;
+  display: block;
+  z-index: 100;
+  position: inherit;
+  max-height: 100%;
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  margin: 0 auto;
+  text-align: center;
+  padding: 31px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--background-primary);
+  transition: 500ms !important;
+}
+
+/*===========================================*/
+/* Image caption / Figure Caption */
+/*=========================================*/
+
+.callout[data-callout="imagen"] {
+  background-color: rgb(255, 255, 255);
+  --callout-icon: image;
+  --callout-title-color: white;
+  --callout-color: white;
+  margin: 5px 35px 30px 35px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px;
+}
+
+.callout[data-callout="imagen"] .callout-content {
+  border-top: 1.3px solid rgb(138, 138, 138);
+
+}
+/*==============================================*/
+/* Center images + Left or right function */
+/*==============================================*/
+
+img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  transition: 500ms;
+}
+
+img[alt*="left"],
+.image-embed[src*="#left"],
+img[src*="#left"] span.left img {
+  float: left !important;
+  margin-right: 3.5% !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+img[alt*="right"],
+.image-embed[src*="#right"],
+img[src*="#right"],
+span.right img {
+  float: right !important;
+  margin-left: 2.5% !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+/*-----------------------------------------------------------------*/
+/* 12. Bordes en el Workspace
+/*-----------------------------------------------------------------*/
+
+/*Cambiar fuente en bloque de código en modo lectura*/
+
+
+/*-------------------------------------------------------------------*/
+/* 15. EMBED */
+/*-------------------------------------------------------------------*/
+
+/* remove title and the table from the "Metatable" plugin */
+
+.markdown-preview-view .markdown-embed-title,
+.markdown-preview-view .obsidian-metatable {
+display: none;
+
+}
+
+/* Link icon */
+.markdown-preview-view .markdown-embed-link,
+.markdown-preview-view .file-embed-link {
+top: 0;
+right: 0;
+left: unset;
+text-align: right;
+border: none;
+margin: 0;
+width: 24px;
+height: 24px;
+color: purple;
+cursor: pointer;
+}
+
+/* for Ars Magna theme and others that change ::before */
+.markdown-preview-view .markdown-embed-link::before,
+.markdown-preview-view .file-embed-link::before {
+display: none;
+}
+
+Link icon size & hide
+.markdown-preview-view .file-embed-link svg,
+.markdown-preview-view .markdown-embed-link svg {
+height: 24px;
+width: 24px;
+opacity: 0;
+display: unset;
+}
+
+/* show on hover */
+.markdown-preview-view .markdown-embed:hover .file-embed-link svg,
+.markdown-preview-view .markdown-embed:hover .markdown-embed-link svg {
+opacity: 1;
+}
+
+/* remove border and scroll */
+/* unfortunately needs !important for some themes */
+.markdown-preview-view .markdown-embed,
+.markdown-preview-view .file-embed {
+border: none !important;
+padding: 0 !important;
+margin: 0 !important;
+}
+
+.markdown-preview-view .markdown-embed-content,
+.markdown-preview-view .markdown-embed-content > .markdown-preview-view { 
+max-height: unset;
+padding: 0 !important;
+padding-left: 5px important;
+margin: 0;
+border: 0;
+color:black;
+}
+
+/* remove <br> between internal embeds */
+.markdown-preview-section div > br {
+display: none;
+}
+
+
+/* remove vertical space added by markdown-preview-sizer */
+div.markdown-preview-sizer.markdown-preview-section {
+min-height: unset !important;
+padding-bottom: 0 !important;
+
+
+}
+
+/* Also remove metadata table from "Metatable" plugin */
+pre.frontmatter,
+.obsidian-metatable {
+  display: none;
+}
+
+/* Naked Embeds - Hide name of file */
+.markdown-embed-title {
+display: none;
+}
+
+.markdown-preview-view .markdown-embed-content>:first-child {
+margin-top: 0;
+}
+
+.markdown-preview-view .markdown-embed-content>:last-child {
+margin-bottom: 0;
+}
+
+/* Better embedded note padding */
+.markdown-preview-view .markdown-embed {
+padding: 0;
+margin: 0;
+}
+
+/* Link symbol on the top right corner */
+.markdown-embed-link {
+color: rgb(0, 0, 0);
+border: 0;
+
+}
+
+.markdown-embed-link:hover {
+color: rgb(0, 0, 0);
+stroke-width: 8px;
+
+}
+
+/* Dimensiones y color de notas embebidas
+
+.markdown-preview-view .markdown-embed-content>.markdown-preview-view {
+max-height: 445px; 
+
+} */
+
+.markdown-preview-view .markdown-embed-content {
+background-color: white;
+border-radius: 10px;
+border-color:black;
+}
+
+.markdown-embed {
+border: px solid #f8f8f200;
+border-left-width: 2.75px;
+border-right-width: 2.75px;
+border-bottom-width: 2.75px;
+border-top-width: 2.75px;
+transition: 150ms ease-in-out;
+border-radius: 10px;
+}
+
+.markdown-embed:hover {
+box-shadow: 0 10px 15px rgba(0, 0, 0, .25), 0 5px 5px rgba(0, 0, 0, .22) !important;
+transform: translate3d(0px, -3.5px, 0px) !important;
+transition: 150ms ease-in-out !important;
+border-color: black !important;
+border-radius: 10px !important;
+
+}
+
+.markdown-embed-content {
+  background-color: white;
+  border-radius: 10px;
+  border-color: black;
+  transition: none; /* Eliminar transiciones */
+  text-shadow: none; /* Eliminar efecto de sombra del texto */
+}
+
+
+
+/* Remove text shadow for embedded notes */
+.markdown-embed-content {
+  background-color: white;
+  border-radius: 10px;
+  border-color: black;
+  transition: none !important;
+  text-shadow: none !important; /* Eliminate text shadow */
+}
+
+/* Remove text shadow on hover for embedded notes */
+.markdown-embed-link:hover {
+  color: rgb(0, 0, 0);
+  stroke-width: 8px;
+  text-shadow: none !important; /* Eliminate text shadow on hover */
+}
+
+/* Adjust hover effect */
+.markdown-embed:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, .25), 0 5px 5px rgba(0, 0, 0, .22) !important;
+  transform: translate3d(0px, -3.5px, 0px) !important;
+  transition: 150ms ease-in-out !important;
+  border-color: black !important;
+  border-radius: 10px !important;
+}
+
+/* --------------------------------------------------------*/
+/*  Suggestion - obsidian autocomplete for notes */
+/* --------------------------------------------------------*/
+
+.suggestion-item.is-selected:hover {
+cursor: pointer;
+background-color: var(--text-accent);
+color: black;
+}
+
+input.prompt-input {
+background-color: var(--text-antinormal);
+}
+
+.prompt-input-container {
+border-bottom: 1.25px solid gray;
+background-color: var(--text-antinormal);
+}
+
+.prompt-results {
+padding: 1px 5px;
+}
+
+/*-----------------------------------------------------------------------------*/
+ /* CODEBLOCKS */
+/*-----------------------------------------------------------------------------*/
+.HyperMD-codeblock,
+.cm-inline-code,
+.markdown-preview-section pre>code {
+    font-family: 'hack', monospace !important;
+    font-size: 1em
+}
+
+/* Cambiar fuente para el código inline en el modo de lectura */
+.markdown-preview-view .markdown-preview-section code {
+    font-family: 'hack', monospace !important;
+    font-size: 1em;
+    color:rgb(54, 54, 54);
+}
+
+/*Bordes en bloque de código modo editor*/
+
+.cm-s-obsidian div.HyperMD-codeblock-bg {
+  background-color: #ebebeb;
+  color: black;
+}
+
+.theme-dark {
+
+
+  --code-normal: #333333; /* Non-highlighted syntax */
+  --code-comment: #007400; /* Comments */
+  --code-function: #0066CC; /* Functions */
+  --code-important: #660099; /* Important, regex */
+  --code-keyword: #0066CC; /* Keywords */
+  --code-operator: #333333; /* Operators */
+  --code-property: #0066CC; /* Properties */
+  --code-punctuation: #333333; /* Punctuation */
+  --code-string: #A31515; /* Strings */
+  --code-tag: #0066CC; /* Tags, symbols, constants */
+  --code-value: #008080; /* Values */
+}
+
+
+/*-----------------------------------------------------------------------------*/
+/* 19. HEADERS */
+/*-----------------------------------------------------------------------------*/
+
+:root {
+  --font-size-normal: 16px;
+  --font-size-code: 15px;
+  --font-size-side-dock: 15px;
+  --font-size-side-dock-title: 16px;
+  --font-size-status-bar: 13.75px;
+  --font-size-h1: 23px;
+  --font-size-h2: 22px;
+  --font-size-h3: 21px;
+  --font-size-h4: 20px;
+  --font-size-h5: 19px;
+  --font-size-h6: 18px;
+}
+
+.theme-dark {
+  --bg-green: rgba(32, 225, 180, 0.47);
+  --bg-blue: rgba(29, 174, 226, 0.48);
+  --bg-purple: rgba(165, 26, 234, 0.47);
+  --bg-magenta: rgba(231, 60, 126, 0.613);
+  --bg-orange: rgba(255, 132, 0, 0.488);
+  --fcolor-header: white;
+}
+
+
+.cm-header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 0.15px !important;
+  word-spacing: 1px;
+  text-align: center;
+  font-weight: 650;
+  color: black !important;
+  transition: color 1s ease-in-out; /* Transición para el cambio de color */
+}
+
+/* Collapse arrow of headers */
+.markdown-preview-view .heading-collapse-indicator {
+  margin-left: -15px;
+  padding: 0 6px;
+}
+
+.cm-s-obsidian .HyperMD-header {
+  text-align: center;
+  line-height: 1.5;
+  padding-bottom: 0.35em !important;
+  padding-top: 0.3em;
+}
+
+.HyperMD-header-1,
+.markdown-preview-section h1,
+.cm-header-1 {
+  font-size: 18.5px !important;
+  font-weight: 700;
+  margin: 30px 0px 3px 0px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-decoration: none;
+  border-radius: 0px;
+  font-family: 'Inter';
+  background: linear-gradient(271deg,
+          transparent,
+          var(--bg-green),
+          var(--bg-blue),
+          var(--bg-purple),
+          var(--bg-magenta),
+          var(--bg-orange),
+          transparent);
+}
+
+.HyperMD-header-2,
+.markdown-preview-section h2,
+.cm-header-2 {
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  font-size: 18.25px;
+  margin: 30px 0px 3px 0px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 0px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-family: 'Inter';
+  background: linear-gradient(271deg,
+          transparent,
+          var(--bg-orange),
+          rgba(255, 140, 0, 0.742),
+          var(--bg-orange),
+          transparent);
+}
+
+.HyperMD-header-3,
+.markdown-preview-section h3,
+.cm-header-3 {
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  font-size: 17.85px;
+  margin: 28px 0px 5px 0px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 0px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-family: 'Inter';
+  background:
+      radial-gradient(circle,
+          var(--bg-magenta) 50%,
+          transparent 100%);
+}
+
+.HyperMD-header-4,
+.markdown-preview-section h4,
+.cm-header-4 {
+  font-weight: 700;
+  text-decoration: underline;
+  text-align: left;
+  font-size: 17.5px;
+  margin: 28px 0px 5px 0px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 0px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-family: 'Inter';
+}
+
+.HyperMD-header-5,
+.markdown-preview-section h5,
+.cm-header-5 {
+  font-weight: 700;
+  text-decoration: none;
+  font-style:normal;
+  text-align: left;
+  font-size: 16px;
+  margin: 28px 0px 5px 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 0px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+
+}
+
+.HyperMD-header-6,
+.markdown-preview-section h6,
+.cm-header-6 {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  text-decoration: solid;
+  font-style:italic;
+  text-align: left;
+  font-size: 14px;
+  margin: 30px 0px 5px 0px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 0px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-family: 'Roboto';
+
+}
+
+/*-----------------------------------------------------------------------------*/
+/*Note Pane*/
+/*-----------------------------------------------------------------------------*/
+
+  /* Titulo de la nota in preview mode, above note */
+
+  .inline-title {
+      background-color: #222222;
+      font-size: 25px;
+      text-align: center;
+      margin: -3px -4px ;
+      margin-right: 0.29ch;
+      border-top-left-radius: 10px ;
+      border-top-right-radius: 10px ;
+      color:rgb(213, 213, 213);
+      font-family: "Calibri";
+      
+  }
+
+
+  /*color iconos lista de viñeta y numeración*/
+.theme-light{
+  --list-marker-color: rgb(210, 2, 113);
+}
+
+.theme-dark{
+  --list-marker-color: rgb(255, 81, 226);
+}
+
+/*-------------------------------------------------------------------*/
+/* MARKDOWN Table*/
+/*-------------------------------------------------------------------*/
+
+:root {
+--table-border-radius: 5px;
+}
+
+.theme-dark tbody tr:hover td {
+background-color: rgb(251, 251, 251) !important;
+}
+
+.markdown-rendered tbody tr>td:nth-child(2n+1) {
+background-color: white;
+}
+
+.markdown-rendered tbody tr>td:nth-child(2n+2) {
+  background-color: white;;
+}
+
+:is(.markdown-preview-section, .markdown-rendered) table:not(.dataview.table-view-table) {
+border-collapse: collapse;
+overflow: auto;
+margin: 20px auto
+}
+
+:is(.markdown-preview-section, .markdown-rendered) table:not(.dataview.table-view-table):active,
+:is(.markdown-preview-section, .markdown-rendered) table:not(.dataview.table-view-table):hover {
+overflow: hidden;
+resize: both !important;
+}
+
+body .markdown-preview-view th,
+body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th,
+body .table-view-table>thead>tr>th {
+background-image: none;
+}
+
+td {
+display: table-cell;
+vertical-align: inherit;
+font-weight: 450;
+}
+
+.markdown-rendered th {
+font-size: 1.05em;
+font-weight: 700;
+text-align: center;
+}
+
+.markdown-rendered thead tr>th {
+color: white;
+}
+
+table {
+margin: 0 auto;
+text-align: left;
+}
+
+.markdown-rendered td,
+.markdown-rendered th {
+border: 10px;
+}
+
+.row-lines .table-view-table>tbody>tr>td,
+.row-lines table:not(.calendar) tbody>tr>td {
+border-bottom: 1 !important;
+}
+
+.markdown-rendered td {
+font-size: var(--table-text-size);
+color: var(--table-text-color);
+}
+
+:is(.markdown-preview-view, .markdown-rendered) :is(.markdown-preview-section, .markdown-rendered) .block-language-itinerary.fc table {
+overflow: unset;
+}
+
+/*modified from https://codepen.io/brettdewoody/pen/oBjbbB */
+body.no-wrapped-table-cell table:not([class*="table-view-table"]),
+body.no-wrapped-dvtable-cell .dataview.table-view-table {
+width: 100%;
+table-layout: fixed;
+}
+
+body.no-wrapped-table-cell table:not([class*="table-view-table"]) :is(th, td),
+body.no-wrapped-dvtable-cell .dataview.table-view-table :is(th, td) {
+white-space: nowrap;
+overflow-x: auto;
+text-overflow: ellipsis;
+}
+
+body.no-wrapped-table-cell table:not([class*="table-view-table"]) :is(th, td):hover,
+body.no-wrapped-dvtable-cell .dataview.table-view-table :is(th, td):hover {
+text-overflow: clip;
+}
+
+/*modified from https://forum.obsidian.md/t/custom-css-for-tables-5-new-styles-ready-to-use-in-your-notes/17084 */
+
+/*dataview table*/
+table.table-view-table>thead>tr>th {
+font-size: 0.9em;
+}
+
+table.table-view-table>tbody>tr>td {
+font-size: 0.95em;
+}
+
+body.wrapped-dvtable:not(.no-wrapped-dvtable-cell):not(.no-wrapped-dvtable) :is(.markdown-preview-view, .markdown-rendered) table.dataview.table-view-table>thead>tr,
+body.wrapped-dvtable:not(.no-wrapped-dvtable-cell):not(.no-wrapped-dvtable) :is(.markdown-preview-view, .markdown-rendered) .table.dataview.table-view-table>tbody>tr,
+body.wrapped-table:not(.no-wrapped-table-cell):not(.no-wrapped-table) :is(.markdown-preview-view, .markdown-rendered) table:not([class*="table-view-table"])>thead>tr,
+body.wrapped-table:not(.no-wrapped-table-cell):not(.no-wrapped-table) :is(.markdown-preview-view, .markdown-rendered) table:not([class*="table-view-table"])>tbody>tr {
+white-space: pre-wrap;
+word-break: break-word;
+overflow-wrap: anywhere;
+}
+
+body.no-wrapped-dvtable .block-language-dataview,
+body.no-wrapped-table table:not([class*="table-view-table"]) {
+width: 100%;
+margin: 0;
+overflow-x: auto;
+white-space: nowrap;
+}
+
+body.no-wrapped-dvtable table.dataview th {
+padding: 0 20px;
+font-size: 1em;
+}
+
+body.no-wrapped-dvtable table.dataview tbody tr td:first-child {
+font-size: 0.9em;
+}
+
+body.no-wrapped-dvtable table.dataview td:not(:first-child),
+body.no-wrapped-dvtable table.dataview tr>td:last-of-type {
+font-size: 0.9em;
+max-width: unset;
+}
+
+body.auto-serial-number-dvtable .markdown-source-view:not(.cards) .dataview.table-view-table {
+counter-reset: sec;
+}
+
+body.auto-serial-number-dvtable .markdown-source-view:not(.cards) .dataview.table-view-table>tbody>tr>td:first-child::before {
+counter-increment: sec;
+content: counter(sec) ". ";
+}
+
+body.auto-serial-number-dvtable .markdown-preview-view:not(.cards) .dataview.table-view-table {
+counter-reset: section;
+}
+
+body.auto-serial-number-dvtable .markdown-preview-view:not(.cards) .dataview.table-view-table>tbody>tr>td:first-child::before {
+counter-increment: section;
+content: counter(section) ". ";
+}
+
+body:not(.no-wrapped-dvtable) :is(.markdown-preview-view, .markdown-rendered) .table-view-table>tbody>tr>td,
+body:not(.no-wrapped-dvtable) .markdown-source-view.mod-cm6 .table-view-table>tbody>tr>td {
+max-width: 18em;
+}
+
+:is(.markdown-preview-view, .markdown-rendered) table tbody>tr,
+.markdown-source-view table tbody>tr {
+background-color: black;
+}
+
+:is(.markdown-preview-view, .markdown-rendered) :is(th, td) {
+padding: 4px 10px;
+border: none;
+}
+
+:is(.markdown-preview-view, .markdown-rendered, .markdown-source-view) th,
+:is(.markdown-preview-view, .markdown-rendered, .markdown-source-view) thead tr>th:nth-child(2n+2) {
+background-color: black;
+font-family: var(--font-family-strong);
+}
+
+/* Table resize how you want in bottom right corner*/
+
+:is(.markdown-preview-section, .markdown-rendered) table:not(.dataview.table-view-table) {
+border-collapse: collapse;
+overflow: auto;
+margin: 20px auto;
+}
+
+:is(.markdown-preview-section, .markdown-rendered) table:not(.dataview.table-view-table):active,
+:is(.markdown-preview-section, .markdown-rendered) table:not(.dataview.table-view-table):hover {
+overflow: hidden;
+resize: both !important;
+}
+
+body .markdown-preview-view th,
+body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th,
+body .table-view-table>thead>tr>th {
+background-image: none;
+}
+
+
+/* -------------------------------------------------- */
+/* blockquote */
+/* -------------------------------------------------- */
+.markdown-preview-view blockquote {
+margin-top: 22px !important;
+margin-bottom: 22px !important;
+padding-top: 8px !important;
+padding-bottom: 8px!important;
+padding-left: 8px !important;
+padding-right: 8px !important;
+border-right-width: 3px !important;
+border-top-width: 1px !important;
+border-bottom-width: 1px !important;
+border-left-width: 3px !important;
+border: 0px solid;
+border-color: rgb(104, 104, 104);
+border-radius: 8px;
+margin-inline-start: 0%;
+margin-inline-end: 0%;
+text-align: left;
+color: black;
+background-color: rgb(255, 255, 255);
+}
+
+/* Open animation */
+
+.markdown-preview-view blockquote:hover {
+border-color: var(--text-accent);
+border-radius: 8px;
+box-shadow: 0 5px 9px rgba(0, 0, 0, .25), 0 4px 5px rgba(0, 0, 0, .25);
+transform: translate3d(0px, -2.5px, 0px);
+transition: transform 0.24s ease-in-out 0s;
+}
+
+/* Closing animation */
+
+.markdown-preview-view blockquote:not(:hover) {
+transform: translate3d(0px, 0px, 0px);
+transition: transform 0.31s ease-in-out 0s;
+}
+
+
+/* 13. CITAS PERSONALIZADAS */
+blockquote:before {
+  font: 14px/20px italic Times, serif;
+  content: "“";
+  font-size: 3em;
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+  color:rgb(26, 26, 26);
+  border-color: #350046;
+}
+
+blockquote p {
+  display: inline;
+  color:rgb(0, 0, 0);
+}
+
+/* Remove blockquote left margin */
+blockquote {
+  margin-inline-start: 0;
+}
+
+
+/* -------------------------------------------------- */
+/* Footnotes */
+/* -------------------------------------------------- */
+
+/* Color of the footnote in preview mode*/
+
+.cm-s-obsidian span.cm-footref,
+.cm-s-obsidian span.cm-blockid {
+  color: var(--text-accent);
+}
+
+/*estilo de borde footer*/
+.markdown-preview-view .footnotes hr {
+margin-top: 0px;
+margin-bottom: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+border:none;
+display: flex;
+}
+
+.markdown-preview-view .footnotes hr::after {
+content: " Footer de notas ";
+font-size: 18px;
+font-family: 'Fira Code', monospace;
+animation: textGlow 4s infinite; /* Aplica la animación al texto del borde */
+}
+
+@keyframes textGlow {
+0%, 100% {
+  color: rgb(0, 0, 0); /* Color inicial */
+  filter: brightness(1); /* Brillo normal */
+}
+50% {
+  color: rgb(101, 101, 101); /* Color brillante */
+  filter: brightness(2); /* Brillo máximo */
+}
+}
+
+/* Estilos para la sección footer */
+section.footnotes {
+background-color: #ffffff;
+transition: background-color 0.5s ease-in-out;
+color: rgb(0, 0, 0);
+transition: transform 0.3s ease-in-out; /* Transición para el efecto de ampliación */
+font-size: 12px;
+stroke-width: 8px;
+box-shadow: 0 1px 9px rgba(88, 88, 88, 0.15), 0 10px 10px rgba(0, 0, 0, .22) !important;
+margin: 3px 3px 3px 3px;
+padding: 4px 14px;
+transform: scale(1); /* Escala inicial */
+border-color: none !important;
+border-radius: 5px !important;
+}
+
+/* Estilos para el texto dentro de la sección footer */
+section.footnotes p {
+transition: none; /* Elimina cualquier transición en el texto */
+}
+
+/* Estilos para el título de la sección */
+section.footnotes h2 {
+margin-top: 0; /* Elimina el margen superior del título */
+font-size: 20px; /* Ajusta el tamaño de la fuente según sea necesario */
+color: grey; /* Cambia el color del texto del título */
+}
+
+/* boton para vincular texto y footer*/
+.footnote-backref {
+  color: #c400be;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: normal !important;
+  padding-left: 10px;
+  font-size: 15px;
+  vertical-align: top;
+}
+
+.footnote-backref:hover {
+  color: rgb(3, 95, 175);
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 4000;
+  transition: 300ms ease-in-out;
+  text-shadow: 0px 0px 12px var(--fbold);
+  position: relative;
+  
+}
+
+.markdown-preview-view .tippy-content {
+  max-height: 22em;
+  overflow-x: auto;
+  font-size: var(--editor-font-size);
+  background-color: var(--background-secondary);
+}
+
+/*Marco de parrafos de lista del footter*/
+section.footnotes li[data-footnote-id] {
+  background-color: #ffffff;
+  transition: background-color 0.5s ease-in-out;
+  font-size: 13px;
+  margin: 0;
+  color: rgb(0, 0, 0);
+  stroke-width: 8px;
+  background-color: white;
+  box-shadow: 0 0px 18px rgba(88, 88, 88, 0.15), 0 5px 5px rgba(0, 0, 0, .20) !important;
+  margin: 5px 5px 5px -5px;
+  padding: 5px 5px 5px 5px;
+  transform: translate3d(-15px, -3.5px, -15px, -15px) !important;
+  border-color: var(--interactive-accent) !important;
+  border-radius: 5px !important;
+}
+
+
+/* -------------------------------------------------- */
+/* LISTS*/
+/* -------------------------------------------------- */
+
+/* línea de regla cuando hay casillas de verificación*/
+.markdown-source-view.mod-cm6 .cm-indent::before {
+border-right: 1.5px solid rgb(255, 255, 255);
+}
+
+ul .task-list-item ul::before {
+left: 0em
+}
+
+ol ol {
+position: relative;
+padding: 0px 0px 0px 25px;
+}
+
+ol ol::before {
+content: '';
+border-left: 2px solid rgb(255, 255, 255);
+position: absolute;
+}
+
+ol ol::before {
+left: -0.75em;
+top: 0;
+bottom: 0;
+}
+
+ol ul {
+position: relative;
+}
+
+ul ol {
+position: relative;
+}
+
+ol ul::before {
+content: '';
+border-left: 2px solid rgb(255, 255, 255);
+position: absolute;
+left: -0.75em;
+top: 0;
+bottom: 0;
+}
+
+ul ol::before {
+content: '';
+border-left: 2px solid rgb(255, 255, 255);
+position: absolute;
+}
+
+.outliner-plugin-bls .CodeMirror-line .cm-hmd-list-indent::before {
+content: '';
+display: block !important;
+position: absolute !important;
+background-image: linear-gradient(to right, rgb(210, 2, 113) 1px, rgb(210, 2, 113) 2px) !important;
+background-size: 1.8ch 1px !important;
+background-position-x: 0px !important;
+width: 100% !important;
+left: 0 !important;
+top: -1.6em !important;
+padding-bottom: 999em !important;
+}
+
+.markdown-rendered.show-indentation-guide li>ul::before {
+left: -1.1em;
+}
+
+.markdown-rendered.show-indentation-guide li>ol::before {
+left: -0.7em;
+}
+
+.markdown-rendered .list-collapse-indicator {
+margin-left: -2em;
+}
+
+li {
+padding: 5px 0px 5.7px 0px;
+}
+
+/* --- RAINBOW LIST COLORS --- */
+
+/*
+From the Obsidian theme: Big & Bold
+https://github.com/Bluemoondragon07/obsidian-big-and-bold
+*/
+
+li {
+--list-marker-color: rgb(199, 0, 166);
+}
+
+li li,
+.cm-list-2 {
+--list-marker-color: rgb(199, 0, 166);
+}
+
+li li li,
+.cm-list-3 {
+--list-marker-color: rgb(199, 0, 166);
+}
+
+li li li li {
+--list-marker-color: rgb(199, 0, 166);
+}
+
+li li li li li {
+--list-marker-color: rgb(199, 0, 166);
+}
+
+li li li li li li {
+--list-marker-color: rgb(199, 0, 166);
+}
+
+li li li li li li li {
+--list-marker-color: rgb(199, 0, 166);
+}
+
+li li li li li li li li {
+--list-marker-color: rgb(199, 0, 166);
+}
+
+li .list-bullet:after {
+width: 0.4em;
+height: 0.4em;
+}
+
+li:hover .list-bullet:after {
+width: 0.6em;
+height: 0.6em;
+}
+
+.list-bullet:after {
+transition: 225ms;
+} 
+
+
+
+/*-----------------*/
+
+/* Bulleted List*/
+
+ul ul {
+position: relative;
+padding: 0px 0px 0px 25px;
+}
+
+ul ul::before {
+content: '';
+border-left: 2px solid rgb(199, 0, 166) !important;
+position: absolute;
+left: -0.8em !important;
+top: auto !important;
+bottom: 0;
+}
+
+ul ol::before {
+left: -1.1em !important;
+}
+
+
+ol ul::before {
+left: -0.7em !important;
+
+}
+ul ol::after {
+left: -1.1em !important;
+}
+
+ol ul::after {
+left: -0.7em !important;
+}
+
+ol>li::marker,
+ul>li::marker,
+.cm-s-obsidian .cm-formatting-list {
+color: rgb(199, 0, 166) !important ;
+font-weight: 600 !important ;
+}
+
+.markdown-source-view.mod-cm6 .cm-formatting-list-ol {
+white-space: pre;
+color: rgb(199, 0, 166) !important;
+}
+
+
+/*OTRAS LISTAS*/
+/*
+author: sailKite
+source: https://discord.com/channels/686053708261228577/702656734631821413/1140761432082886707
+*/
+
+:is(.cm-formatting-list-ul, .markdown-rendered ul > li) > .list-bullet::after {
+  border: 1px solid var(--list-marker-color);
+}
+:is(
+    ul:not(li > ul) > li > ul > li,
+    ul:not(li > ul) > li > ul > li > ul > li > ul > li,
+    ul:not(li > ul) > li > ul > li > ul > li > ul > li > ul > li > ul > li,
+    ul:not(li > ul)
+      > li
+      > ul
+      > li
+      > ul
+      > li
+      > ul
+      > li
+      > ul
+      > li
+      > ul
+      > li
+      ul
+      > li
+      > ul
+      > li
+  )
+  > .list-bullet::after,
+:is(
+    .HyperMD-list-line-2,
+    .HyperMD-list-line-4,
+    .HyperMD-list-line-6,
+    .HyperMD-list-line-8
+  )
+  .cm-formatting-list-ul
+  > .list-bullet::after {
+  background-color: transparent;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~ Callouts ~~~~~~~~~~~~~~~~~~ */
+
+body {
+  --callout-blend-mode: normal !important;
+  
+  }
+
+  .theme-dark .callout > .callout-content {
+    background-color: #ffffff !important;
+    override-colors: #ffffff;
+    border-block-color: #ffffff ;
+    border:  #ffffff;
+  }
+
+
+  /* "Properties"  */
+.metadata-properties-heading {
+  display: none;
+  
+}
+
+.metadata-container{
+  background-color: rgb(34, 34, 34) !important;
+  font-family: "hack";
+  border-top-left-radius: none ;
+  border-top-right-radius: none ;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/*--------------------------------------------------------------*/
+/*scrollbar del editor */
+/*--------------------------------------------------------------*/
+
+.mod-root ::-webkit-scrollbar {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-content > * {
+  margin: auto auto !important;
+}
+
+/*Cursor*/
+.cm-editor * {
+  caret-color: black !important;
+
+}
+
+/*Scroollbar*/
+body:not(.native-scrollbars){
+  --scrollbar-active-thumb-bg: rgba(108, 54, 217, 0.75);
+  --scrollbar-bg: rgba(220, 220, 220, 0.287);
+  --scrollbar-thumb-bg: rgba(202, 185, 232, 0.883);
+}
+
+/* -------------------------------------------------- */
+/* ------------------------FIN----------------------- */
+/* -------------------------------------------------- */
