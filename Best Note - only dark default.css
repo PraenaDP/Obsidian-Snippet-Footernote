@@ -1,26 +1,98 @@
-/*Theme Dark Default Obsidian, Only Note Theme light*/
-/*I've used code snippets from Victologo's theme and others*/
-/*Settings*/
+/*Theme Dark Default Obsidian, Only Note Theme Dark*/
+/*I've used code snippets from Victologo's theme and others contributions*/
 
+			/*Settings*/
 /*------------------------------------------------
 Is recomended install:
 
 Code styler Pluggin ("It's advisable to use a clear type of code block.")
 Callout Manager Pluggin. 
 
-S - Callouts css ("With these calls, the theme improves.")
-S - Encoded icons
-S - External Link Icons
+And download de css snippets of Callouts S1Rvb, incredible!
+https://publish.obsidian.md/slrvb-docs/ITS+Theme/Callout+Adjustments
 https://github.com/SlRvb/Obsidian--ITS-Theme
 
 -------------------------------------------------*/
 
-/* --------------------------------*/
-/* AJUSTE DE NOTA */
-/* --------------------------------*/
+/*Pluggins incredibles recomended*/
+
+/*
+3d-graph-new
+buttons
+calendar
+callout-manager
+chronology
+cmdr
+code-styler
+darlal-switcher-plus
+dataview
+editing-toolbar
+find-unlinked-files
+google-calendar
+homepage
+links
+make-md
+markdown-table-editor
+media-extended
+metadata-menu
+mousewheel-image-zoom
+mysnippets-plugin
+numerals
+obsidian42-brat
+obsidian-admonition
+obsidian-annotator
+obsidian-bulk-rename-plugin
+obsidian-columns
+obsidian-copy-block-link
+obsidian-epub-plugin
+obsidian-excalidraw-plugin
+obsidian-file-color
+obsidian-full-calendar
+obsidian-hotkeys-for-specific-files
+obsidian-hover-editor
+obsidian-icon-folder
+obsidian-kanban
+obsidian-mind-map
+obsidian-native-scrollbars
+obsidian-pandoc
+obsidian-plugin-update-tracker
+obsidian-projects
+obsidian-regex-pipeline
+obsidian-sortable
+obsidian-style-settings
+obsidian-stylist
+obsidian-tasks-plugin
+obsidian-text-format
+obsidian-transcription
+obsidian-wrap-with-shortcuts
+omnisearch
+oz-clear-unused-images
+pdf-plus
+quickadd
+quick-explorer
+search-on-internet
+settings-search
+smart-rename
+table-editor-obsidian
+tag-wrangler
+telegram-sync
+templater-obsidian
+text-extractor
+update-time-on-edit
+url-into-selection
+writing
+ytranscript
+*/
+
+/* ----------------------------------------------------------------------------------------------*/
+/*                                         3, 2, 1  START                                        */
+
+
+/* ----------------------------------------------*/
+/*             AJUSTE DE NOTA                    */
+/* ----------------------------------------------*/
 
 /*Bordes panel de notas*/
-
 
 .dashboard{
   background-color: rgb(38, 38, 38);
@@ -94,8 +166,8 @@ div.markdown-preview-section > div > ul.has-list-bullet > li {
 
 .callout[data-callout="imagen"] .callout-content {
   border-top: 1.3px solid rgb(138, 138, 138);
-
 }
+
 /*==============================================*/
 /* Center images + Left or right function */
 /*==============================================*/
@@ -134,7 +206,7 @@ span.right img {
 
 
 /*-------------------------------------------------------------------*/
-/* 15. EMBED */
+/*                         15. EMBED                                 */
 /*-------------------------------------------------------------------*/
 
 /* remove title and the table from the "Metatable" plugin */
@@ -253,10 +325,8 @@ stroke-width: 8px;
 }
 
 /* Dimensiones y color de notas embebidas
-
 .markdown-preview-view .markdown-embed-content>.markdown-preview-view {
 max-height: 445px; 
-
 } */
 
 .markdown-preview-view .markdown-embed-content {
@@ -281,7 +351,6 @@ transform: translate3d(0px, -3.5px, 0px) !important;
 transition: 150ms ease-in-out !important;
 border-color: black !important;
 border-radius: 10px !important;
-
 }
 
 .markdown-embed-content {
@@ -343,7 +412,7 @@ padding: 1px 5px;
 }
 
 /*-----------------------------------------------------------------------------*/
- /* CODEBLOCKS */
+ /*                                   CODEBLOCKS                               */
 /*-----------------------------------------------------------------------------*/
 .HyperMD-codeblock,
 .cm-inline-code, 
@@ -415,7 +484,6 @@ padding: 1px 5px;
 .token.attr-value{
   color: #2aa1a1;
   font-size: 1.1em;
-
 }
 
 .token.keyword {
@@ -432,8 +500,8 @@ padding: 1px 5px;
   color:#028787;
   font-size: 1.1em;
 }
-/*---------------*/
 
+/*---------------*/
 
 /* Bloque principal */
 body pre {
@@ -446,7 +514,6 @@ body pre {
   position: relative; /* Agregar posición relativa */
   padding-left: 4em;
 }
-
 
 /* Mostrar el lenguaje + header */
 body pre[class^="language-"]::before {
@@ -574,7 +641,6 @@ body pre[class~='language-powershell']::before {
   --bg-orange: rgba(255, 132, 0, 0.488);
   --fcolor-header: white;
 }
-
 
 .cm-header,
 h1,
@@ -714,9 +780,9 @@ h6 {
   font-family: 'Roboto';
 }
 
-/*-----------------------------------------------------------------------------*/
-/*Note Pane*/
-/*-----------------------------------------------------------------------------*/
+/*-------------------------------------------*/
+/*               Note Pane                   */
+/*-------------------------------------------*/
 
   /* Titulo de la nota in preview mode, above note */
 
@@ -743,7 +809,7 @@ h6 {
 }
 
 /*-------------------------------------------------------------------*/
-/* MARKDOWN Table*/
+/*                               MARKDOWN Table                      */
 /*-------------------------------------------------------------------*/
 
 /*dataview table*/
@@ -915,7 +981,7 @@ color:rgb(65, 65, 65);
 
   
 /* -------------------------------------------------- */
-/* blockquote */
+/*                     blockquote                     */
 /* -------------------------------------------------- */
 .markdown-preview-view blockquote {
 margin-top: 22px !important;
@@ -979,7 +1045,7 @@ blockquote {
 
 
 /* -------------------------------------------------- */
-/* Footnotes */
+/*                   Footnotes                        */
 /* -------------------------------------------------- */
 
 /* Color of the footnote in preview mode*/
@@ -1093,7 +1159,7 @@ section.footnotes li[data-footnote-id] {
 }
 
 /* -------------------------------------------------- */
-/* LISTS*/
+/*                    LISTS                           */
 /* -------------------------------------------------- */
 /* línea de regla cuando hay casillas de verificación*/
 
@@ -1324,7 +1390,6 @@ source: https://discord.com/channels/686053708261228577/702656734631821413/11407
 
 body {
   --callout-blend-mode: normal !important;
-  
   }
 
   .theme-dark .callout > .callout-content {
@@ -1384,10 +1449,7 @@ body {
 /* Estilo para los valores de propiedad*/
 .cm-hmd-frontmatter, .cm-string .cm-number {
   color: #e0e0e0;
-  
 }
-
-
 
 /* Estilos para los valores dentro del bloque de propiedades */
 .cm-property {
@@ -1500,7 +1562,6 @@ body:not(.native-scrollbars){
   border:1px;
   border-color: #7b7b7b;
   border-radius: 8px;
-
 }
 
 /* adjust rendered (query control) font in Backlinks pane */
@@ -1596,6 +1657,6 @@ body:not(.native-scrollbars){
   filter: var(--link-external-filter);
   word-break: keep-all;
 }
-/* -------------------------------------------------- */
-/* ------------------------FIN----------------------- */
-/* -------------------------------------------------- */
+
+/*                                                 FIN                                            */
+/* ---------------------------------------------------------------------------------------------- */
