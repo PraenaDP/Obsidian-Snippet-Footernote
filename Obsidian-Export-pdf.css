@@ -1,0 +1,287 @@
+@media print {
+
+    /* Document-wide. ---------------------------------------------------------------------- */
+    @page { /* Page structure. */
+        margin: 1cm !important;
+
+    }
+
+
+    a:link, a:visited, a { /* Links. */
+        text-align: left !important;
+    }
+
+    .print > .markdown-preview-view {
+        width: 100% !important;
+        text-align: justify !important;
+        padding: 20px !important;
+    }
+
+    /* Horizontal separator. Por si quiero usar las tres líneas (---) como separador de hojas en pdf-------------- */
+    /* hr {
+        border: none !important;
+        border-top: 0px solid lightgray !important;
+        page-break-after: always !important;
+    } */
+
+
+
+    body {
+      background-color: white;
+      tab-size: 4 !important;
+      --code-background: white !important;
+      --code-normal: black !important;
+        text-align: justify !important;
+        font-family: 'roboto' !important;
+
+    }
+
+    strong, .cm-s-obsidian span.cm-formatting-strong, .cm-s-obsidian span.cm-strong {
+        color:  rgb(49, 49, 49);
+      }
+
+/* Headers H5 y H6 sin color*/
+
+h4 {
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+    text-align: left !important;
+    font-size: 17.5px !important;
+    margin: 28px 0px 5px 0px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    border-radius: 0px !important;
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+    font-family: 'Inter' !important;
+    letter-spacing: 0.15px !important;
+    word-spacing: 1px !important;
+    color:rgba(19, 19, 19, 0.742);
+}
+
+h5 {
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    text-align: left !important;
+    font-size: 16px !important;
+    margin: 28px 0px 5px 0px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    border-radius: 0px !important;
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+    font-family: 'Inter' !important;
+    letter-spacing: 0.15px !important;
+    word-spacing: 1px !important;
+    color:rgba(19, 19, 19, 0.742);
+}
+
+h6 {
+    letter-spacing: 0.15px !important;
+    word-spacing: 1px !important;
+    text-align: left !important;
+    font-family: 'Inter' !important;
+    font-style: italic !important;
+    font-size: 13px !important;
+    color:rgba(19, 19, 19, 0.742)
+  }
+
+h1,h2,h3 {
+        letter-spacing: 0.15px !important;
+        word-spacing: 1px !important;
+        font-weight: 700 !important;
+        font-family: 'Inter' !important;
+        text-decoration: none !important;
+        text-align: center;
+        padding-top: 6px !important;
+        padding-bottom: 6px !important;
+        border-radius: 0px !important;
+        padding-right: 5px !important;
+        padding-left: 5px !important;
+    }
+    
+    h1 {
+        font-size: 17.5px !important;
+        margin: 30px 0px 3px 0px !important;
+        background: linear-gradient(271deg,
+                rgba(255, 255, 255, 0.2), /* Transparente */
+                rgb(255, 255, 255), /* Blanco */
+                rgb(185, 247, 185),
+                rgb(183, 183, 255),
+                rgb(255, 216, 247),
+                rgb(230, 171, 182),
+                rgb(255, 220, 185),
+                rgb(239, 238, 193),
+                rgb(255, 255, 255), /* Blanco */
+                rgba(255, 255, 255, 0.2) /* Transparente */
+                ) !important;
+    }
+    
+    
+    h2 {
+        font-size: 17.25px !important;
+        margin: 30px 0px 3px 0px !important;
+        background: linear-gradient(90deg,
+                    rgba(255, 255, 255, 0.9),
+                    rgba(255, 140, 0, 0.742),
+                    rgba(255, 255, 255, 0.9)
+                ); /* Color naranja en medio, blanco en los laterales */
+    }
+    
+    h3 {
+        font-weight: 700 !important;
+        font-size: 16.85px !important;
+        margin: 28px 0px 5px 0px !important;
+        background: linear-gradient(90deg,
+                    rgba(255, 255, 255, 0.9),
+                    rgb(212, 88, 148),
+                    rgba(255, 255, 255, 0.9)
+                ); /* Color púrpura en medio, blanco en los laterales */
+    }
+    
+
+    
+    /* table thead tr th {
+        color:rgba(227, 227, 227, 0.742) !important;
+    } */
+
+body {
+  --callout-blend-mode: normal !important;
+  
+  }
+
+  .theme-dark .callout > .callout-content {
+    background-color: #ffffff !important;
+    override-colors: #ffffff;
+    border-block-color: #ffffff ;
+    border:  #ffffff;
+  }
+
+.callout > .callout-content {
+          background-color: #ffffff !important;
+          override-colors: #ffffff;
+          border-block-color: #ffffff ;
+          border:  #ffffff;
+        }
+
+/*-----------------------------------------*/
+/*             CODE BLOCK                  */
+/*-----------------------------------------*/
+
+/*Inline código*/
+.markdown-rendered code /* for preview/reading view */
+{
+    font-family: 'hack', monospace !important;
+    font-size: 14px !important;
+    --code-normal: #2a2a2a !important ;
+    --code-comment: #007400 !important;
+    --code-function: #0066CC !important;
+    --code-important: #660099 !important;
+    --code-keyword: #0066CC !important;
+    --code-operator: #333333 !important;
+    --code-property: #0066CC !important;
+    --code-punctuation: #333333 !important;
+    --code-string: #A31515 !important;
+    --code-tag: #0066CC !important;
+    --code-value: #008080 !important;
+    background-color: #efefef !important;
+}
+
+
+/* Bloque principal */
+body pre {
+    background-color: #efefef !important;
+    justify-content: center;
+    font-family: 'hack';
+    padding: 0; /* Eliminar todo el relleno */
+    margin: 0; /* Eliminar todo el margen */
+    overflow-x: auto; /* Permitir desplazamiento horizontal si es necesario */
+    position: relative; /* Agregar posición relativa */
+    padding-left: 4em;
+}
+
+/* Mostrar el lenguaje + header */
+body pre[class^="language-"]::before {
+    background-color: rgb(173, 173, 173);
+    font-family: var(--font-default);
+    color: rgb(255, 255, 255);
+    font-size: 9px;
+    font-weight: 600;
+    position: absolute; /* Cambiar el posicionamiento a absoluto */
+    left: 0; /* Ajustar para que la línea comience desde el borde izquierdo */
+    top: 0; /* Ajustar para que la línea comience desde el borde superior */
+    content: attr(class);
+    width: 100%; /* Ajustar el ancho al 100% del bloque */
+    padding: 0.1em 0.5em; /* Ajustar el relleno */
+    padding-left: 20px; /* Ajustar el espacio a la derecha */
+    text-align: left; /* Alinear el texto a la izquierda */
+    box-sizing: border-box; /* Incluir padding y border en el ancho total */
+    border-bottom: 5px solid #efefef; /* Conservar el borde inferior */
+    margin-bottom: 5em !important;
+}
+
+  body pre[class~='language-c']::before {
+    content: "C";
+  }
+  body pre[class~='language-cs']::before {
+    content: "C#";
+  }
+  body pre[class~='language-cpp']::before {
+    content: "C++";
+  }
+  body pre[class~='language-java']::before {
+    content: "JAVA";
+  }
+  body pre[class~='language-py']::before,
+  body pre[class~='language-python']::before {
+    content: "PYTHON";
+  }
+  body pre[class~='language-javascript']::before,
+    body pre[class~='language-js']::before {
+    content: "JS";
+  }
+  body pre[class~='language-html']::before {
+    content: "HTML";
+  }
+  body pre[class~='language-css']::before {
+    content: "CSS";
+  }
+  body pre[class~='language-xml']::before {
+    content: "XML";
+  }
+  body pre[class~='language-php']::before {
+    content: "PHP";
+  }
+  body pre[class~='language-bash']::before {
+    content: "BASH";
+  }
+  body pre[class~='language-shell']::before
+  {
+    content: "SHELL";
+  }
+  body pre[class~='language-flow']::before {
+    content: "FLOW";
+  }
+  body pre[class~='language-sequence']::before {
+    content: "SEQUENCE";
+  }
+  body pre[class~='language-sql']::before {
+    content: "SQL";
+  }
+  body pre[class~='language-yml']::before,
+  body pre[class~='language-yaml']::before {
+    content: "YAML";
+  }
+  body pre[class~='language-ini']::before {
+    content: "INI";
+  }
+  body pre[class~='language-git']::before {
+    content: "GIT";
+  }
+  body pre[class~='language-txt']::before {
+    content: "TXT";
+  }
+  body pre[class~='language-r']::before {
+    content: "R";
+  }
+}
